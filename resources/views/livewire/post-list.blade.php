@@ -8,7 +8,7 @@
     @else
         <div class="w-full space-y-4">
             @foreach($posts as $post)
-            <div class="p-6 rounded-lg shadow-md bg-gray-50 dark:bg-zinc-800">
+            <div class="p-6 bg-white dark:bg-zinc-800">
                 <div class="mb-4">
 
                 </div>

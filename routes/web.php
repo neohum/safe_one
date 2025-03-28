@@ -11,9 +11,6 @@ Route::get('/youtube-select', function () {
     return view('select');
 })->name('youtube-select');
 
-Route::get('/youtube-rewrite', function () {
-    return view('rewrite');
-})->name('youtube-rewrite');
 
 Route::view('dashboard', 'dashboard')
     ->middleware(['auth', 'verified'])
