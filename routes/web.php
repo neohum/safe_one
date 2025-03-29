@@ -12,6 +12,12 @@ Route::get('/youtube-select', function () {
 })->name('youtube-select');
 
 
+Route::get('/not', function () {
+    return view('not');
+})->name('not');
+
+
+
 Route::view('dashboard', 'dashboard')
     ->middleware(['auth', 'verified'])
     ->name('dashboard');
