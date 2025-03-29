@@ -11,9 +11,11 @@ Route::get('/youtube-select', function () {
     return view('select');
 })->name('youtube-select');
 
+
 Route::get('/not', function () {
     return view('not');
 })->name('not');
+
 
 
 Route::view('dashboard', 'dashboard')
