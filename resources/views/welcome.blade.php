@@ -12,6 +12,17 @@
 
         @vite(['resources/css/app.css', 'resources/js/app.js'])
         @livewireScripts()
+        <script>
+            window.onload=function deviceCheck() {
+
+                const user = navigator.userAgent;
+
+                if ( user.indexOf("iPhone") > -1 || user.indexOf("Android") > -1 ) {
+                    window.location.href = "{{ route('not') }}";
+                }
+        }
+
+        </script>
     </head>
     <body class="bg-[#FDFDFC] dark:bg-[#0a0a0a] text-[#1b1b18] min-h-screen flex flex-col p-6 lg:p-8">
         <div class="w-full p-4 mb-8 bg-white dark:bg-zinc-900">
