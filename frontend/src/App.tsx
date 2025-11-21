@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { useDeviceDetect } from './hooks/useDeviceDetect';
+import { FullscreenProvider } from './contexts/FullscreenContext';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import DevTools from './components/DevTools';
@@ -16,22 +17,24 @@ function App() {
   }
 
   return (
-    <Router>
-      <div className="min-h-screen flex flex-col p-6">
-        <Header />
+    <FullscreenProvider>
+      <Router>
+        <div className="min-h-screen flex flex-col p-6">
+          <Header />
 
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/select" element={<Select />} />
-          <Route path="*" element={<Navigate to="/" replace />} />
-        </Routes>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/select" element={<Select />} />
+            <Route path="*" element={<Navigate to="/" replace />} />
+          </Routes>
 
-        <Footer />
+          <Footer />
 
-        {/* 개발 환경에서만 표시되는 개발자 도구 */}
-        <DevTools />
-      </div>
-    </Router>
+          {/* 개발 환경에서만 표시되는 개발자 도구 */}
+          <DevTools />
+        </div>
+      </Router>
+    </FullscreenProvider>
   );
 }
 

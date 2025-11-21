@@ -6,7 +6,7 @@ export default function DateDisplay() {
 
   return (
     <div>
-      <h1 className="mb-4 text-6xl font-bold text-orange-500">
+      <h1 className="mb-4 text-9xl font-bold text-orange-500">
         {date} {weekday}
       </h1>
     </div>

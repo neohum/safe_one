@@ -88,6 +88,11 @@ code {
   line-height: 1;
 }
 
+.text-9xl {
+  font-size: 5.625rem;
+  line-height: 1;
+}
+
 .font-bold {
   font-weight: 700;
 }
